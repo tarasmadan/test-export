@@ -20,7 +20,9 @@ jobs:
 
       - name: Unpack the archive
         run: |
-          tar -xzf archive.tar.gz && delete archive.tar.gz
+          mkdir -p linux && cd linux
+          tar -xzf ../archive.tar.gz --strip-components=1
+          cd .. && delete archive.tar.gz
 
       - name: Commit changes
         run: |
