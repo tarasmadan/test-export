@@ -22,7 +22,7 @@ jobs:
         run: |
           mkdir -p linux && cd linux
           tar -xzf ../archive.tar.gz --strip-components=1
-          cd .. && delete archive.tar.gz
+          cd .. && rm archive.tar.gz
 
       - name: Commit changes
         run: |
